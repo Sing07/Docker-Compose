@@ -21,7 +21,7 @@ $ docker run -d images
 
 - *to show logs*  
 
-$ docker logs <container-id>
+$ docker logs {container-id}
 
 
 <h2> To pull docker images from docker.io online repo [$ docker pull] </h2>
@@ -48,11 +48,27 @@ where  80 = localenv, 80 = container env
 </br>
 
 <h2> Run docker by setting name, detached mode, port bind and name image </h2>
-$ docker run --name <container-name> -d -p 9000:80 nginx:1.23
+$ docker run --name {container-name} -d -p 9000:80 nginx:1.23
  
 
 <h2> To stop container &nbsp;&nbsp;&nbsp;&nbsp; [$ docker stop {container-id}] </h2>
 
 <h2> To quit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [$ docker quit] </h2>
+
+</br>
+</br>
+</br>
+
+# To build image, with Dockerfile present, or run [$ docker init]
+$ docker build -t {image_name} .
+
+<h2> to build an image from a Dockerfile without the cache </h2>
+$ docker build -t {image_name} . –no-cache 
+
+<h2> Delete an Image </h2>
+$ docker rmi {image_name}
+  
+<h2> remove all unused images </h2>
+$ docker image prune 
 
 
