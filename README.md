@@ -41,7 +41,19 @@ Some Docker Terms
 <h2> Run docker by setting name, detached mode, port bind, image name </h2>
 
 `$ docker run --name {container-name} -d -p 9000:80 nginx:1.23`
- 
+
+or
+
+`$ docker run -d \`  
+`-p 80:80`  
+`-e MONGO_INITDB_ROOT_USERNAME=admin \`  
+`-e MONGO_INITDB_ROOT_PASSWORD=pass \`  
+`--network #optional`  
+`--name {container-name}`  
+
+</br>
+</br>
+
 `$ docker stop {container-id}` 
 
 `$ docker quit` 
