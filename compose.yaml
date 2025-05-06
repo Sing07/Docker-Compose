@@ -1,0 +1,22 @@
+# Docker compose configuration file
+
+services:
+  backend:
+    build: .
+    ports:
+      - '9000:9000'
+
+  db:
+    image: postgres:latest
+    # these list of environment varaibles can be found from images' docker.io docs
+    environment:
+      POSTGRES_USER: {user}
+      POSTGRES_PASSWORD: {pass}
+      POSTGRES_DB: mydb
+    # optionally specify if we want to store data locally on local machine which containers can access
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres data:
+  
